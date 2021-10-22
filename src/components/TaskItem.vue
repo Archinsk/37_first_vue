@@ -32,7 +32,8 @@
     .btn-close {
         padding: 0.9375rem;
     }
-.btn-close:focus {
+
+    .btn-close:focus {
         box-shadow: none;
     }
 </style>

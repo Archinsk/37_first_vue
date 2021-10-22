@@ -1,5 +1,9 @@
 <template>
-    <IconButtonSquare :icon="icon" :semantics="buttonSemantics"/>
+    <IconButtonSquare
+            :icon="icon"
+            :semantics="buttonSemantics"
+            :class="buttonSemantics"
+    />
 </template>
 
 <script>
@@ -22,7 +26,10 @@
 </script>
 
 <style scoped>
-    .iconButtonSquare {
+    .menuButton {
         margin-left: 0.75rem;
+        border-radius: 0.25rem;
+        background-color: transparent;
+        color: white;
     }
 </style>

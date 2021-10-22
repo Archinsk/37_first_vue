@@ -1,9 +1,11 @@
 <template>
     <header>
-        <img id="logo" src="img/lifeplan_logo.jpg" alt="">
-        <div>
-            <MenuButton :icon="menu"/>
-            <MenuButton :icon="logout"/>
+        <div class="container">
+            <img id="logo" src="img/lifeplan_logo.jpg" alt="">
+            <div>
+                <MenuButton :icon="menu"/>
+                <MenuButton :icon="logout"/>
+            </div>
         </div>
     </header>
 </template>
@@ -27,11 +29,14 @@
 
 <style scoped>
     header {
+        background-color: RGB(96, 192, 96);
+        color: white;
+    }
+
+    header div {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: RGB(96, 192, 96);
-        color: white;
     }
 
     #logo {

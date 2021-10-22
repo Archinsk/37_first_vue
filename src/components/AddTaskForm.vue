@@ -1,41 +1,40 @@
 <template>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Введите текст задачи..." aria-label="Введите текст задачи..." aria-describedby="button-addon2"
+    <div class="input-group my-2">
+        <input type="text" class="form-control" placeholder="Введите текст задачи..."
+               aria-label="Введите текст задачи..." aria-describedby="button-addon2"
                @input="onInputHandler"
                v-model="addTaskInputValue"
         />
         <InputGroupButton
                 :icon="iconName"
+                :class="buttonSemantics"
                 @add-task-form="addNewTask"
         />
-<!--        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>-->
     </div>
 </template>
 
 <script>
     import InputGroupButton from "@/components/InputGroupButton";
+
     export default {
         name: "AddTaskForm",
         data() {
-          return {
-              iconName: 'add',
-              addTaskInputValue: ''
-          }
+            return {
+                iconName: 'add',
+                buttonSemantics: 'input',
+                addTaskInputValue: '',
+            }
         },
-        props: [
-          // 'formValue'
-        ],
+        props: [],
         components: {
             InputGroupButton
         },
         methods: {
             addNewTask() {
-                this.$emit("add-task")
+                this.$emit("add-task");
+                this.addTaskInputValue = ''
             },
             onInputHandler() {
-                // if (this.formValue === '') {
-                //     this.addTaskInputValue = this.formValue
-                // }
                 this.$emit("change-input-value", this.addTaskInputValue)
             }
         }
@@ -43,5 +42,10 @@
 </script>
 
 <style scoped>
-
+    .form-control {
+        border-color: RGB(128, 128, 128);
+    }
+    .form-control:focus {
+        box-shadow: none;
+    }
 </style>

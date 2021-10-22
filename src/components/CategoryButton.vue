@@ -1,5 +1,8 @@
 <template>
-    <IconButtonSquare :icon="icon" :semantics="buttonSemantics"/>
+    <IconButtonSquare
+            :icon="icon"
+            :class="buttonSemantics"
+    />
 </template>
 
 <script>
@@ -22,9 +25,9 @@
 </script>
 
 <style scoped>
-    .iconButtonSquare {
+    .categoryButton {
         margin-right: 0.75rem;
-        border-radius: 0.1875rem 0;
+        border-radius: 0.1875rem;
         background-color: deepskyblue;
         color: RGB(240, 255, 224);
     }

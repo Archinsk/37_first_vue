@@ -2,7 +2,7 @@
     <button class="iconButtonSquare"
             @click="$emit('handler')"
     >
-    <span class="material-icons">{{icon}}</span>
+        <span class="material-icons">{{icon}}</span>
     </button>
 </template>
 
@@ -11,13 +11,11 @@
         name: "IconButtonSquare",
         data() {
             return {
-                btnClass: 'this.semantics',
+
             };
         },
         props: [
-            'button-type',
             'icon',
-            'semantics'
         ]
     }
 </script>

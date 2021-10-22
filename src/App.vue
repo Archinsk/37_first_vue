@@ -1,14 +1,15 @@
 <template>
-    <div id="app" class="container">
+    <div id="app">
         <Header/>
-        <AddTaskForm
-                @add-task="addNewTask"
-                @change-input-value="changeInputValue"
-                :formValue="inputValue"
-        />
-        <TaskList
-            :listItems="items"
-        />
+        <div class="container">
+            <AddTaskForm
+                    @add-task="addNewTask"
+                    @change-input-value="changeInputValue"
+            />
+            <TaskList
+                    :listItems="items"
+            />
+        </div>
     </div>
 </template>
 

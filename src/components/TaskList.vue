@@ -1,6 +1,10 @@
 <template>
     <ul class="taskList">
-        <TaskItem v-for="item of listItems" v-bind:key="item" v-bind:taskItem="item"/>
+        <TaskItem
+                v-for="item of listItems"
+                :key="item.id"
+                :taskItem="item"
+        />
     </ul>
 </template>
 
@@ -12,12 +16,6 @@
         props: [
             'listItems'
         ],
-        // data() {
-        //     return {
-        //         items: 'add',
-        //         addTaskInputValue: ''
-        //     }
-        // },
         components: {
             TaskItem,
         }
