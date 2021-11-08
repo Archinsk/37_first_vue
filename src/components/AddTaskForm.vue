@@ -2,7 +2,6 @@
     <div class="input-group my-2">
         <input type="text" class="form-control" placeholder="Введите текст задачи..."
                aria-label="Введите текст задачи..." aria-describedby="button-addon2"
-               @input="onInputHandler"
                v-model="addTaskInputValue"
         />
         <InputGroupButton
@@ -31,12 +30,9 @@
         },
         methods: {
             addNewTask() {
-                this.$emit("add-task");
+                this.$emit("add-task", this.addTaskInputValue);
                 this.addTaskInputValue = ''
             },
-            onInputHandler() {
-                this.$emit("change-input-value", this.addTaskInputValue)
-            }
         }
     }
 </script>

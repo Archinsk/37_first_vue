@@ -3,8 +3,7 @@
         <Header/>
         <div class="container">
             <AddTaskForm
-                    @add-task="addNewTask"
-                    @change-input-value="changeInputValue"
+                    @add-task="addNewTask($event)"
             />
             <TaskList
                     :listItems="items"
@@ -27,21 +26,21 @@
                     {id: 2, task: 'Посадить дерево', done: true, icon: 'favorite'},
                     {id: 3, task: 'Вырастить сына', done: false, icon: 'home'},
                 ],
-                inputValue: ''
+                // inputValue: ''
             }
         },
         components: {
             Header, AddTaskForm, TaskList
         },
         methods: {
-            addNewTask() {
-                let newTask = {id: this.items.length + 1, task: this.inputValue, done: false, icon: 'home'};
+            addNewTask(event) {
+                let newTask = {id: this.items.length + 1, task: event, done: false, icon: 'home'};
                 this.items.push(newTask);
                 this.inputValue = "";
             },
-            changeInputValue(inputText) {
-                this.inputValue = inputText
-            }
+            // changeInputValue(inputText) {
+            //     this.inputValue = inputText
+            // }
         }
     }
 </script>
