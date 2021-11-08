@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import IconButtonSquare from "@/components/IconButtonSquare";
+    import IconButtonSquare from "@/components/universal/IconButtonSquare";
 
     export default {
         name: "InputGroupButton",

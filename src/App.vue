@@ -9,13 +9,20 @@
                     :listItems="items"
             />
         </div>
+        <BootstrapButton type="reset"/>
+        <BootstrapButton semantic="danger"/>
+        <BootstrapButton type="menu" semantic="success" outline/>
+
+        <IconButtonSquare icon="home"/>
     </div>
 </template>
 
 <script>
     import Header from "@/components/Header";
     import AddTaskForm from "@/components/AddTaskForm";
-    import TaskList from './components/TaskList'
+    import TaskList from '@/components/TaskList'
+    import BootstrapButton from "@/components/BootstrapButton";
+    import IconButtonSquare from "@/components/universal/IconButtonSquare";
 
     export default {
         name: 'App',
@@ -30,7 +37,11 @@
             }
         },
         components: {
-            Header, AddTaskForm, TaskList
+            Header,
+            AddTaskForm,
+            TaskList,
+            BootstrapButton,
+            IconButtonSquare,
         },
         methods: {
             addNewTask(event) {

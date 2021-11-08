@@ -9,11 +9,6 @@
 <script>
     export default {
         name: "IconButtonSquare",
-        data() {
-            return {
-
-            };
-        },
         props: [
             'icon',
         ]
@@ -24,11 +19,9 @@
     .iconButtonSquare {
         padding: 0;
         border: none;
-        cursor: pointer;
     }
 
     .material-icons {
         padding: 0.6875rem;
-        margin-right: 0;
     }
 </style>

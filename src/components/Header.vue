@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="container">
-            <img id="logo" src="img/lifeplan_logo.jpg" alt="">
+            <img id="logo" src="@/assets/lifeplan_logo.jpg" alt="Life Plan Logo">
             <div>
                 <MenuButton :icon="menu"/>
                 <MenuButton :icon="logout"/>
